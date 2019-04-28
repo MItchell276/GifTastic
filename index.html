@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .container {
+            float: right;
+            width: 630px;
+        }
+
+        .btn {
+
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .jumbotron {
+            background-image: url();
+
+        }
+
+
+        body {
+            background-image: url("file:///Users/danmitchell/Downloads/633518.jpg");
+
+        }
+
+        .contanier {
+            background-color: #ffffff;
+            border: 1px solid black;
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+
+        }
+    </style>
+
+    <title>Document</title>
+
+</head>
+<div class="jumbotron" id="cars">
+    <!-- <button data-search="BMW" class="btn btn-outline-secondary">BMW</button>
+    <button data-search="Mercedes" class="btn btn-outline-secondary">Mercedes</button> -->
+    <!-- <button class="movie" data-name="The Matrix">The Matrix</button> -->
+</div>
+<form action="search">
+    <div class="container">
+        <div class="form-group col-md-6">
+            <label for="inputCar">Add an Car:</label>
+            <input type="car" class="form-control" id="search-input" placeholder="Search">
+            <button type="submit" class="btn btn-primary searchButton">Search</button>
+        </div>
+</form>
+
+</div>
+<div id="gifsGoHere"></div>
+
+
+
+<body>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="assets/app.js">
+        // $("button").on('click', function () {
+        //     // console.log("button clicked");
+        //     var x = $(this).data("search");
+        //     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+        //         cars + "&api_key=dc6zaTOxFJmzC&limit=10";
+        //     // console.log(queryURL);
+
+
+        //     $.ajax({ url: queryURL, method: 'GET' })
+        //         .done(function (response) {
+        //             for (var i = 0; i < response.data.length; i++) {
+        //                 var carDiv = $('<div>');
+        //                 var p = $('<p>').text("Rating: " + response.data[i].rating);
+        //                 var carImage = $('<img>');
+        //                 carImage.attr('src', response.data[i].images.fixed_height.url);
+
+        //                 carDiv.append(p);
+        //                 carDiv.append(carImage);
+        //                 $('#gifsGoHere').append(carDiv);
+        //             }
+
+        //         })
+        // })
+
+        // $(".gif").on("click", function () {
+
+        //     var state = $(this).attr("data-state");
+        //     console.log(state);
+
+
+        //     if (state === "still") {
+        //         var carSrc = $(this).attr("data-car");
+        //         $(this).attr("src", carSrc);
+        //         $(this).attr("src", carSrc);
+
+
+        //     } else {
+        //         var stillSrc = $(this).attr("data-still");
+        //         $(this).attr("src", stillSrc);
+
+        //     }
+
+        // });
+
+
+
+
+    </script>
+</body>
+
+</html>
