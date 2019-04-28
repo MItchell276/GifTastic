@@ -3,29 +3,11 @@ var cars = ["BMW", "Merecedes", "Ford", "Honda", "Audi", "Lexus", "Infiniti", "C
 createButtons()
 
 $("#cars").on('click', '.gif-button', function () {
-    // console.log("button clicked");
+    console.log("button clicked");
     var x = $(this).data("name");
     console.log(x);
     gifCall(x);
-    // var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    //     "" + "&api_key=rjXAwHeiNN7rSSycytwtW687U3HVHJKX&limit=10";
-    // console.log(queryURL);
 
-
-    // $.ajax({ url: queryURL, method: 'GET' })
-    //     .done(function (response) {
-    //         for (var i = 0; i < response.data.length; i++) {
-    //             var carDiv = $('<div>');
-    //             var p = $('<p>').text("Rating: " + response.data[i].rating);
-    //             var carImage = $('<img>');
-    //             carImage.attr('src', response.data[i].images.fixed_height.url);
-
-    //             carDiv.append(p);
-    //             carDiv.append(carImage);
-    //             $('#gifsGoHere').append(carDiv);
-    //         }
-
-    //     })
 })
 
 $(".gif").on("click", function () {
