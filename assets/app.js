@@ -10,18 +10,18 @@ $("#cars").on('click', '.gif-button', function () {
 
 })
 
-$(".gif").on("click", function () {
+$(document).on("click", ".gif", function () {
 
-    var state = $(this).attr("cars");
+    var state = $(this).attr("data-state");
     console.log(state);
 
-    if (state == 'still') {
-        var carSrc = $(this).attr("animate");
-        $(this).attr('src', $(this).data('animate'));
+    if (state === 'still') {
+        var carSrc = $(this).attr("data-animate");
+        $(this).attr('src', carSrc);
         $(this).attr('data-state', 'animate');
     } else {
-        var stillSrc = $(this).attr("still");
-        $(this).attr('src', $(this).data('still'));
+        var stillSrc = $(this).attr("data-still");
+        $(this).attr('src', stillSrc);
         $(this).attr('data-state', 'still');
     }
 
@@ -49,10 +49,11 @@ function gifCall(search) {
             for (var i = 0; i < response.data.length; i++) {
                 var carDiv = $('<div>');
                 var p = $('<p>').text("Rating: " + response.data[i].rating);
-                var carImage = $('<img class = "gif" data-still = "' + response.data[i].images.downsized_still.url + '">');
-                carImage.attr('src', response.data[i].images.fixed_height.url);
-                carImage.attr('data-still', response.data[i].images.fixed_height.url);
+                var carImage = $('<img class = "gif">');
+                carImage.attr('src', response.data[i].images.downsized_still.url);
+                carImage.attr('data-still', response.data[i].images.downsized_still.url);
                 carImage.attr('data-animate', response.data[i].images.fixed_height.url);
+                carImage.attr('data-state', "still");
 
                 carDiv.prepend(p);
                 carDiv.prepend(carImage);
